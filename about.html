@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        </head>
+        <body>
+            <p>~~~~~~~~~~~~~~~~~~~~~~~~~~~ </p>
+            <p>This program allows you to compare individual stocks and find relevant information about each one.
+                I created it so that I could easily compare new positions with my existing ones so I wouldn't make
+            rash investment decisions. I like to focus on dividend and long-term investments. I want stable positions
+            that I can passively manage and can keep through my working lifetime. I've chosen a few indicators that
+                will help me identify fair value in a stock. I've set some personal benchmark values below:</p>
+            <br>
+            <p>A Price to Earnings Ratio (PE) of less than 50. </p>
+            <p>A Beta (the measure of volatility) below 1.5 </p>
+            <p>A Market Capitalization above $100 Billion (Large Cap)</p>
+            <p>A Dividend of 1% or more</p>
+            <br>
+            <p>These are not hard and set rules, rather, they act as guides for my investments. The information
+            panel as shown below also includes many other indicators to show short term movement in the market.
+            they are useful, though not critical to my investment strategy. To compare stocks, input two ticker symbols
+            in the boxes at the bottom of the page. To compare stocks to the benchmark simply put in a ticker in just
+            the first input box.</p>
+            <br>
+            <p>[This is an example of some stock information:] </p>
+            <p>{{stock}} stock information</p>
+            <p>Sector: {{sector}}</p>
+            <p>Last Open: ${{open}}</p>
+            <p>Last Close: ${{close}}</p>
+            <p>Fifty Day Average: ${{fifty_day}}</p>
+            <p>Price to Earnings Ratio: {{PE}}</p>
+            <p>Beta: {{beta}}</p>
+            <p>Market Capitalization: ${{marketCap}}</p>
+            <p>Average Dividend: {{dividend}}%</p>
+            <p>This Year's Price Peak: ${{yearlyHigh}}</p>
+            <br>
+            <p>Here's a list of popular Tickers:</p>
+            <p>"MSFT" ~ Microsoft</p>
+            <p>"BA" ~ Boeing</p>
+            <p>"AAPL" ~ Apple</p>
+            <p>"DIS" ~ Disney</p>
+            <p>"SBUX" ~ StarBucks</p>
+            <p>"PG" ~ Procter and gamble</p>
+            <p>"AMZN" ~ Amazon</p>
+            <p> ~~~~~~~~~~~~~~~~~~~~~~~~~ </p>
+        </body>
+
+        <form action="ticker" method="get">
+            <label for="ticker">Please Enter Stock Ticker Symbol: </label>
+            <input type="text" id="ticker" name="ticker">
+            <input type="submit" value="Compare with Benchmarks" name="goInput"/>
+            <br>
+            <label for="ticker2">Please Enter Another Stock's Ticker Symbol: </label>
+            <input type="text" id="ticker2" name="ticker2">
+            <input type="submit" value="Compare With First Stock" name="goInput2"/>
+        </form>
+</html>
